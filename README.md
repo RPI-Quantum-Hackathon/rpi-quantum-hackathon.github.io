@@ -12,5 +12,5 @@ This is a simple, static landing page for a student-led quantum computing hackat
 
 Open `index.html` in any modern browser:
 
-1. In your file explorer, navigate to `D:\quantum-hackathon-site\`.
+1. In your file explorer, navigate to where you cloned the repository.
 2. Double-click `index.html` (or right-click and choose "Open with" → your browser).
