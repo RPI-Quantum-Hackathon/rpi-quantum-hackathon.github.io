@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Code of Conduct · RPI Quantum Hackathon 2026</title>
+    <meta
+      name="description"
+      content="Code of Conduct for the RPI Quantum Hackathon 2026, hosted by the RPI Quantum Computing Club."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .coc-hero {
+        padding: 3rem 0 2rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .coc-hero .hero-gradient {
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(circle at 10% -10%, rgba(56, 189, 248, 0.35), transparent 60%),
+          radial-gradient(circle at 90% 10%, rgba(129, 140, 248, 0.4), transparent 55%);
+        opacity: 0.6;
+        pointer-events: none;
+      }
+
+      .coc-hero-inner {
+        position: relative;
+        z-index: 1;
+        max-width: 720px;
+      }
+
+      .coc-hero-inner h1 {
+        font-size: clamp(2rem, 3vw, 2.8rem);
+        letter-spacing: -0.04em;
+        margin: 0.3rem 0 0.7rem;
+      }
+
+      .coc-hero-inner p {
+        color: var(--text-muted);
+        font-size: 0.97rem;
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      .coc-back {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-bottom: 1.5rem;
+        transition: color 0.15s ease;
+      }
+
+      .coc-back:hover {
+        color: var(--text);
+      }
+
+      .coc-back svg {
+        width: 14px;
+        height: 14px;
+      }
+
+      .coc-body {
+        padding: 0 0 4rem;
+      }
+
+      .coc-content {
+        max-width: 720px;
+      }
+
+      .coc-section {
+        margin-bottom: 2.5rem;
+      }
+
+      .coc-section-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        color: var(--accent-2);
+        margin-bottom: 0.6rem;
+      }
+
+      .coc-section-label .label-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--accent-2);
+        box-shadow: 0 0 8px rgba(6, 182, 212, 0.8);
+      }
+
+      .coc-section h2 {
+        font-size: 1.25rem;
+        letter-spacing: -0.025em;
+        margin: 0 0 1rem;
+      }
+
+      .coc-rule {
+        display: flex;
+        gap: 0.85rem;
+        align-items: flex-start;
+        padding: 0.85rem 1rem;
+        border-radius: 12px;
+        border: 1px solid var(--border-subtle);
+        background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.7), rgba(2, 6, 23, 0.4));
+        margin-bottom: 0.6rem;
+        transition: border-color 0.15s ease;
+      }
+
+      .coc-rule:hover {
+        border-color: rgba(148, 163, 184, 0.55);
+      }
+
+      .coc-rule-icon {
+        flex-shrink: 0;
+        width: 28px;
+        height: 28px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.85rem;
+        margin-top: 0.05rem;
+      }
+
+      .icon-blue {
+        background: rgba(6, 182, 212, 0.15);
+        border: 1px solid rgba(6, 182, 212, 0.3);
+      }
+
+      .icon-purple {
+        background: rgba(79, 70, 229, 0.15);
+        border: 1px solid rgba(79, 70, 229, 0.3);
+      }
+
+      .icon-amber {
+        background: rgba(245, 158, 11, 0.12);
+        border: 1px solid rgba(245, 158, 11, 0.28);
+      }
+
+      .coc-rule-text {
+        flex: 1;
+      }
+
+      .coc-rule-text strong {
+        display: block;
+        font-size: 0.94rem;
+        margin-bottom: 0.2rem;
+      }
+
+      .coc-rule-text p {
+        margin: 0;
+        font-size: 0.88rem;
+        color: var(--text-muted);
+        line-height: 1.55;
+      }
+
+      .coc-divider {
+        height: 1px;
+        background: var(--border-subtle);
+        margin: 2.2rem 0;
+        opacity: 0.5;
+      }
+
+      .coc-report {
+        padding: 1.2rem 1.3rem;
+        border-radius: var(--card-radius);
+        border: 1px solid rgba(79, 70, 229, 0.35);
+        background: radial-gradient(circle at top left, rgba(79, 70, 229, 0.1), rgba(2, 6, 23, 0.6));
+        box-shadow: 0 0 40px rgba(79, 70, 229, 0.08);
+      }
+
+      .coc-report h3 {
+        font-size: 1rem;
+        margin: 0 0 0.35rem;
+      }
+
+      .coc-report p {
+        margin: 0;
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        line-height: 1.6;
+      }
+
+      .coc-report a {
+        color: var(--accent-2);
+      }
+
+      .coc-report a:hover {
+        text-decoration: underline;
+      }
+
+      .coc-meta {
+        margin-top: 2rem;
+        font-size: 0.82rem;
+        color: var(--text-muted);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <div class="logo">
+          <span class="logo-mark">RQ</span>
+          <span class="logo-text">RPI Quantum Hackathon</span>
+        </div>
+        <nav class="nav">
+          <a href="index.html#about">About</a>
+          <a href="index.html#schedule">Schedule</a>
+          <a href="index.html#faq">FAQ</a>
+          <a href="index.html#sponsors">Sponsors</a>
+          <a href="index.html#apply" class="nav-cta">Register</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="coc-hero">
+        <div class="hero-gradient"></div>
+        <div class="container">
+          <div class="coc-hero-inner">
+            <a href="index.html" class="coc-back">
+              <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 2L4 7l5 5"/>
+              </svg>
+              Back to main site
+            </a>
+            <p class="eyebrow">RPI Quantum Computing Club · Hackathon 2026</p>
+            <h1>Code of Conduct</h1>
+            <p>
+              All participants, mentors, judges, sponsors, and organizers at the
+              RPI Quantum Hackathon are required to agree to and follow this
+              code of conduct. Organizers will enforce it throughout the event.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="coc-body">
+        <div class="container">
+          <div class="coc-content">
+
+            <!-- Core Behavior -->
+            <div class="coc-section">
+              <div class="coc-section-label">
+                <span class="label-dot"></span>
+                Core Behavior
+              </div>
+              <h2>Expected conduct</h2>
+
+              <div class="coc-rule">
+                <div class="coc-rule-icon icon-blue">🤝</div>
+                <div class="coc-rule-text">
+                  <strong>Be respectful</strong>
+                  <p>Treat all participants, mentors, judges, and organizers with respect. Disagreements happen — handle them constructively.</p>
+                </div>
+              </div>
+
+              <div class="coc-rule">
+                <div class="coc-rule-icon icon-blue">🚫</div>
+                <div class="coc-rule-text">
+                  <strong>No harassment or discrimination</strong>
+                  <p>Harassment and discrimination of any kind will not be tolerated. This includes conduct based on gender, gender identity, sexual orientation, race, ethnicity, nationality, religion, age, or disability status.</p>
+                </div>
+              </div>
+
+              <div class="coc-rule">
+                <div class="coc-rule-icon icon-blue">📋</div>
+                <div class="coc-rule-text">
+                  <strong>No plagiarism</strong>
+                  <p>All submitted work must be built during the hackathon. Passing off others' work as your own is grounds for immediate disqualification.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="coc-divider"></div>
+
+            <!-- Competition Integrity -->
+            <div class="coc-section">
+              <div class="coc-section-label">
+                <span class="label-dot"></span>
+                Competition Integrity
+              </div>
+              <h2>Fair play</h2>
+
+              <div class="coc-rule">
+                <div class="coc-rule-icon icon-purple">🔨</div>
+                <div class="coc-rule-text">
+                  <strong>Original work only</strong>
+                  <p>Projects must be original work started at the event. Continuing a pre-existing project is not permitted.</p>
+                </div>
+              </div>
+
+              <div class="coc-rule">
+                <div class="coc-rule-icon icon-purple">📦</div>
+                <div class="coc-rule-text">
+                  <strong>Disclose pre-existing code and libraries</strong>
+                  <p>Use of open-source libraries, APIs, and frameworks is encouraged, but must be disclosed in your project submission. Any pre-written code used as a starting point must be clearly identified.</p>
+                </div>
+              </div>
+
+              <div class="coc-rule">
+                <div class="coc-rule-icon icon-purple">⚖️</div>
+                <div class="coc-rule-text">
+                  <strong>Judges' decisions are final</strong>
+                  <p>All judging decisions are final. Participants are welcome to ask judges for feedback after awards, but outcomes are not subject to appeal.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="coc-divider"></div>
+
+            <!-- Enforcement -->
+            <div class="coc-section">
+              <div class="coc-section-label">
+                <span class="label-dot"></span>
+                Enforcement
+              </div>
+              <h2>Violations & reporting</h2>
+
+              <div class="coc-rule">
+                <div class="coc-rule-icon icon-amber">⚠️</div>
+                <div class="coc-rule-text">
+                  <strong>Consequences</strong>
+                  <p>Violations of this code of conduct may result in a warning, disqualification of a team's submission, or removal from the event — at the sole discretion of the organizers.</p>
+                </div>
+              </div>
+
+              <div class="coc-rule">
+                <div class="coc-rule-icon icon-amber">🏛️</div>
+                <div class="coc-rule-text">
+                  <strong>Organizer authority</strong>
+                  <p>The RPI Quantum Computing Club organizers have final authority on all code of conduct matters during the event.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Report box -->
+            <div class="coc-report">
+              <h3>How to report a violation</h3>
+              <p>
+                If you experience or witness a violation of this code of conduct,
+                please contact the organizers directly at
+                <a href="mailto:rpi.quantum.computing.club@gmail.com">rpi.quantum.computing.club@gmail.com</a>
+                or find an organizer in person at the event. All reports will be
+                handled with discretion and taken seriously.
+              </p>
+            </div>
+
+            <p class="coc-meta">Last updated March 2026 · RPI Quantum Computing Club</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-title">RPI Quantum Hackathon 2026</p>
+          <p class="footer-text">
+            A student-led quantum computing hackathon hosted by the RPI Quantum
+            Computing Club.
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="index.html#faq">FAQ</a>
+          <a href="index.html#apply">Register</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
