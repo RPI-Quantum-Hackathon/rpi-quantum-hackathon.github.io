@@ -598,22 +598,87 @@ img {
   color: var(--accent-2);
 }
 
-.sponsor-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+.sponsor-tier-label {
+  text-align: center;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--text-muted);
+  margin: 1.5rem 0 0.6rem;
+}
+
+.sponsor-tier {
+  display: flex;
+  justify-content: center;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .sponsor-card {
   border-radius: var(--card-radius);
   border: 1px dashed rgba(148, 163, 184, 0.55);
   background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.9), #020617);
-  padding: 1.4rem 1.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.9rem;
-  color: var(--text-muted);
+  padding: 0.85rem 1.1rem;
+}
+
+.sponsor-tier--title .sponsor-card {
+  width: 100%;
+  height: 140px;
+  padding: 1.8rem 1.5rem;
+  border-style: solid;
+  border-color: rgba(79, 70, 229, 0.55);
+  background:
+    radial-gradient(circle at 20% 0%, rgba(168, 85, 247, 0.18), transparent 60%),
+    radial-gradient(circle at 80% 10%, rgba(14, 165, 233, 0.14), transparent 55%),
+    radial-gradient(circle at top left, rgba(15, 23, 42, 0.9), #020617);
+}
+
+.sponsor-tier--main .sponsor-card,
+.sponsor-tier--partners .sponsor-card {
+  flex: 1;
+  min-width: 240px;
+  height: 104px;
+}
+
+.sponsor-tier--partners .sponsor-card {
+  height: 84px;
+  opacity: 0.75;
+}
+
+.sponsor-card a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.sponsor-card img {
+  max-width: 94%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(20%);
+  transition: filter 0.2s ease, opacity 0.2s ease;
+}
+
+.sponsor-tier--title .sponsor-card img {
+  max-height: 110px;
+}
+
+.sponsor-tier--main .sponsor-card img {
+  max-height: 74px;
+}
+
+.sponsor-tier--partners .sponsor-card img {
+  max-height: 60px;
+}
+
+.sponsor-card:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
 }
 
 .apply-section {
@@ -715,7 +780,6 @@ img {
 
   .two-column,
   .schedule,
-  .sponsor-grid,
   .apply-inner {
     grid-template-columns: minmax(0, 1fr);
   }
