@@ -491,6 +491,80 @@ img {
   gap: 1.2rem;
 }
 
+.prize-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.9fr) minmax(0, 1.6fr);
+  gap: 1.2rem;
+  align-items: stretch;
+}
+
+.prize-total-card,
+.prize-breakdown-card {
+  border-radius: var(--card-radius);
+  border: 1px solid var(--border-subtle);
+  background: radial-gradient(circle at top left, #111827, rgba(15, 23, 42, 0.6));
+  box-shadow: var(--shadow-soft);
+}
+
+.prize-total-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.25rem 1.3rem;
+}
+
+.prize-total-label {
+  margin: 0;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+}
+
+.prize-total-amount {
+  margin: 0.4rem 0 0;
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.prize-breakdown-card {
+  padding: 1.15rem 1.2rem;
+}
+
+.prize-breakdown-card h3 {
+  margin: 0 0 0.8rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.prize-breakdown-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.prize-breakdown-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-top: 1px solid rgba(148, 163, 184, 0.25);
+  font-size: 1rem;
+}
+
+.prize-breakdown-list li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.prize-breakdown-list li strong {
+  font-size: 1.1rem;
+}
+
 .schedule-day {
   background: radial-gradient(circle at top, #020617, #020617 75%, #030712);
   border-radius: var(--card-radius);
@@ -816,6 +890,7 @@ img {
   }
 
   .two-column,
+  .prize-layout,
   .schedule,
   .apply-inner {
     grid-template-columns: minmax(0, 1fr);
