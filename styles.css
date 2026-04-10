@@ -485,6 +485,22 @@ img {
   color: var(--text-muted);
 }
 
+.sub-items .speaker-name {
+  display: block;
+  font-size: 0.94rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.sub-items .talk-title {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.86rem;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
 .schedule {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
